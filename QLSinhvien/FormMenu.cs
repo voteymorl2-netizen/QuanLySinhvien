@@ -10,7 +10,7 @@ namespace QLSinhvien
             InitializeComponent();
         }
 
-        // 🔹 Chuyển sang FormSinhVien
+        //  Chuyển sang FormSinhVien
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
             FormSinhVien f = new FormSinhVien();
@@ -18,7 +18,7 @@ namespace QLSinhvien
             this.Hide(); // ẩn menu
         }
 
-        // 🔹 Chuyển sang FormLopHoc
+        //  Chuyển sang FormLopHoc
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
             FormLopHoc f = new FormLopHoc();
@@ -26,7 +26,7 @@ namespace QLSinhvien
             this.Hide();
         }
 
-        // 🔹 Đăng xuất → trở về FormLogin
+        //  Đăng xuất → trở về FormLogin
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             FormLogin f = new FormLogin();
