@@ -7,7 +7,7 @@ namespace QLSinhvien
 {
     public partial class FormSinhVien : Form
     {
-        // 🔌 Chuỗi kết nối SQL Server
+        // Chuỗi kết nối SQL Server
         string connStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True";
 
         string selectedID = ""; // Lưu ID khi chọn từ DataGridView
@@ -28,7 +28,7 @@ namespace QLSinhvien
             cbGioiTinh.Items.Add("Nữ");
         }
 
-        // 🔹 Load dữ liệu SinhVien
+        // Load dữ liệu SinhVien
         void LoadData()
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -40,7 +40,7 @@ namespace QLSinhvien
             }
         }
 
-        // 🔹 Click vào DataGridView → đổ dữ liệu lên form
+        // Click vào DataGridView → đổ dữ liệu lên form
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
@@ -56,7 +56,7 @@ namespace QLSinhvien
             }
         }
 
-        // 🔹 Nút Thêm
+        //  Nút Thêm
         private void btnThem_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -79,7 +79,7 @@ namespace QLSinhvien
             LoadData();
         }
 
-        // 🔹 Nút Sửa
+        //  Nút Sửa
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (selectedID == "") return;
@@ -104,7 +104,7 @@ namespace QLSinhvien
             LoadData();
         }
 
-        // 🔹 Nút Xóa
+        //  Nút Xóa
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (selectedID == "") return;
@@ -124,7 +124,7 @@ namespace QLSinhvien
             LoadData();
         }
 
-        // 🔹 Nút Làm mới
+        //  Nút Làm mới
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             txtMaSV.Clear();
@@ -137,7 +137,7 @@ namespace QLSinhvien
             LoadData();
         }
 
-        // 🔹 Nút Tìm kiếm
+        //  Nút Tìm kiếm
         private void btnTim_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -164,13 +164,13 @@ namespace QLSinhvien
             }
         }
 
-        // 🔹 Nút chuyển sang FormSinhVien (đang ở đây → có thể bỏ)
+        //  Nút chuyển sang FormSinhVien (đang ở đây → có thể bỏ)
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
             // Không cần làm gì nếu đang ở FormSinhVien
         }
 
-        // 🔹 Nút chuyển sang FormLopHoc
+        //  Nút chuyển sang FormLopHoc
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
             FormLopHoc f = new FormLopHoc();
@@ -178,7 +178,7 @@ namespace QLSinhvien
             this.Hide();
         }
 
-        // 🔹 Nút Đăng xuất
+        //  Nút Đăng xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             FormLogin f = new FormLogin();
