@@ -6,7 +6,7 @@ namespace QLSinhvien
 {
     public partial class FormLogin : Form
     {
-        // 🔌 Chuỗi kết nối SQL Server
+        //  Chuỗi kết nối SQL Server
         string connStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True";
 
         public FormLogin()
